@@ -9,8 +9,10 @@
   ],
   "scripts": {
     "web:dev": "cd apps/web && pnpm dev",
+    "cms:dev": "cd apps/cms && pnpm dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "cd apps/web && pnpm lint --fix"
   },
   "dependencies": {
     "@babel/core": "^7.23.0",
