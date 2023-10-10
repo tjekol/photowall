@@ -12,7 +12,7 @@ export default async function Home() {
         <h1 className='text-lg'>
           This is my photography gallery.
         </h1>
-        <p className='text-gray-600'>
+        <p className='text-slate-400'>
           This website are photos taken with my camera. They are uploaded through <a href='https://www.sanity.io' target='_' className='font-semibold hover:underline'>Sanity</a> and fetched with Next.js.
         </p>
       </div>
