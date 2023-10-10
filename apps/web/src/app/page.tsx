@@ -1,10 +1,8 @@
 import { getPicture } from '@/lib/picture';
-import { Picture } from '@/lib/picture/schemas';
-import { urlFor } from '@/utils/image-builder';
 import Image from 'next/image';
 
 export default async function Home() {
-  const data = await getPicture() as Picture[];
+  const pictures = await getPicture();
 
   return (
     <main className='flex flex-col min-h-screen  items-center p-24'>
@@ -18,19 +16,11 @@ export default async function Home() {
       </div>
 
       <div className='columns-xs w-4/5 gap-4'>
-        <ul>
-          {data.map((picture) => (
-            <li key={picture._id} className='mb-4'>
-              <Image
-                className='w-full aspect-picture'
-                alt={picture.name}
-                src={urlFor(picture.image).width(1000).url()}
-                width={200}
-                height={200}
-              />
-            </li>
-          ))}
-        </ul>
+        {pictures.map((picture) => (
+          <div key={picture._id} className='mb-4'>
+            <Image className='w-full aspect-image' src={picture.image} alt={picture.name} width={350} height={200}/>
+          </div>
+        ))}
       </div>
       <a href='https://github.com/tjekol/memories' target='_' className='static bottom-6 mt-8 hover:underline text-gray-400'>Made by Thea Jenny Kolnes🦋</a>
     </main>

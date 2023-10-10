@@ -87,6 +87,9 @@ importers:
       react-dom:
         specifier: ^18
         version: 18.2.0(react@18.2.0)
+      sanity:
+        specifier: ^3.17.0
+        version: 3.17.0(@types/node@20.8.3)(@types/react@18.2.27)(react-dom@18.2.0)(react@18.2.0)(styled-components@5.3.11)
       types:
         specifier: link:@sanity/image-url/lib/types/types
         version: link:@sanity/image-url/lib/types/types
