@@ -16,6 +16,7 @@
     "next-sanity-client": "^1.0.7",
     "react": "^18",
     "react-dom": "^18",
+    "sanity": "^3.17.0",
     "types": "link:@sanity/image-url/lib/types/types",
     "zod": "^3.22.4"
   },

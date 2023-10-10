@@ -1,10 +1,19 @@
-import { sanityClient } from '../sanity';
+import { Picture } from './schemas';
+import { groq } from 'next-sanity';
 
-export async function getPicture() {
-  const query = '*[_type == "picture"] | order(_createdAt desc)';
-  const data = await sanityClient.fetch(query, {
-    next: { revalidate: 10 },
-  });
-
-  return data;
+export async function getPicture(): Promise<Picture[]> {
+  const { client } = await import('@/lib/sanity');
+  
+  return client.fetch(
+    groq`*[_type == "picture"] | order(_createdAt desc){
+      _id,
+      name,
+      description,
+      "image": image.asset->url,
+      createdAt
+    }`,
+    {
+      next: { revalidate: 10 },
+    }
+  );
 }

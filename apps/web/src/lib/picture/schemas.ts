@@ -1,13 +1,9 @@
-export interface Picture {
+import { PortableTextBlock } from 'sanity';
+
+export type Picture = {
   _id: string;
   name: string;
-  description: string;
-  image: {
-    _type: 'image';
-    asset: {
-      _ref: string;
-      _type: 'reference';
-    };
-  };
+  description: PortableTextBlock[];
+  image: string,
   createdAt: string;
 }

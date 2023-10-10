@@ -9,14 +9,23 @@ export default {
       title: 'Name',
     },
     {
-      name: 'description',
-      type: 'string',
-      title: 'Description',
+      name: 'content',
+      type: 'array',
+      title: 'Content',
+      of: [{ type: 'block' }],
     },
     {
       name: 'image',
       type: 'image',
       title: 'Image',
+      options: { hotspot: true },
+      fiels: [
+        {
+        name: 'alt',
+        title: 'Alt',
+        type: 'string',
+        }
+      ]
     }
   ]
 }
