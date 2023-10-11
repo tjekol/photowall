@@ -1,11 +1,11 @@
-import { getPicture } from '@/lib/picture';
+import { getPicture } from '@/sanity/picture';
 import Image from 'next/image';
 
-export default async function Home() {
+export default async function HomePage() {
   const pictures = await getPicture();
 
   return (
-    <main className='flex flex-col min-h-screen  items-center p-24'>
+    <main className='flex flex-col min-h-screen items-center p-24'>
       <div className='max-w-2xl w-full justify-between font-mono text-sm m-6'>
         <h1 className='text-2xl'>
           This is my photography gallery.
