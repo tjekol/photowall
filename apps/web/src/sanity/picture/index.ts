@@ -13,7 +13,7 @@ export async function getPicture(): Promise<Picture[]> {
       createdAt
     }`,
     {
-      next: { revalidate: 10 },
+      cache: process.env.NODE_ENV == 'production' ? 'force-cache' : 'no-store'
     }
   );
 }

@@ -1,8 +1,19 @@
 import { getPicture } from '@/sanity/picture';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
+
+async function getProps() {
+  const pictures = await getPicture();
+
+  if (!pictures) {
+    return notFound();
+  }
+
+  return pictures;
+}
 
 export default async function HomePage() {
-  const pictures = await getPicture();
+  const pictures = await getProps();
 
   return (
     <main className='flex flex-col min-h-screen items-center p-24'>
