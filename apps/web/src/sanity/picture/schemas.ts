@@ -1,6 +1,6 @@
 import { PortableTextBlock } from 'sanity';
 
-export type Picture = {
+export type IPicture = {
   _id: string;
   name: string;
   description: PortableTextBlock[];

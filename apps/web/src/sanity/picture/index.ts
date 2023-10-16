@@ -1,7 +1,7 @@
-import { Picture } from './schemas';
+import { IPicture } from './schemas';
 import { groq } from 'next-sanity';
 
-export async function getPicture(): Promise<Picture[]> {
+export async function getPicture(): Promise<IPicture[]> {
   const { client } = await import('@/sanity/client');
   
   return client.fetch(
