@@ -9,10 +9,14 @@ export default {
       title: 'Name',
     },
     {
-      name: 'content',
+      name: 'description',
       type: 'array',
-      title: 'Content',
-      of: [{ type: 'block' }],
+      title: 'Description',
+      of: [
+        {
+          type: 'block',
+        }
+      ],
     },
     {
       name: 'image',
