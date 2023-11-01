@@ -15,7 +15,7 @@ export default function HomePage() {
     };
     fetchData();
   }, [pictures]);
-  
+
   return (
     <main className='flex flex-col min-h-screen items-center p-24'>
       <div className='max-w-2xl w-full justify-between font-mono text-sm m-6'>
