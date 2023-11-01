@@ -1,9 +1,19 @@
 import { getPicture } from '@/sanity/picture';
+import { IPicture } from '@/sanity/picture/schemas';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 export default async function HomePage() {
-  const pictures = await getPicture();
+  const [pictures, setPictures] = useState<IPicture[]>([]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getPicture();
+      setPictures(data);
+    };
+    fetchData();
+  }, [pictures]);
+  
   return (
     <main className='flex flex-col min-h-screen items-center p-24'>
       <div className='max-w-2xl w-full justify-between font-mono text-sm m-6'>
