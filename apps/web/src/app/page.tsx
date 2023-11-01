@@ -1,9 +1,11 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import { getPicture } from '@/sanity/picture';
 import { IPicture } from '@/sanity/picture/schemas';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 
-export default async function HomePage() {
+export default function HomePage() {
   const [pictures, setPictures] = useState<IPicture[]>([]);
 
   useEffect(() => {
