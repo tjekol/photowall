@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 export default function DefaultLayout({
   children,
 }: {
-  children: ReactNode;
+  children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
-      <body>{children}</body>
+    <html lang='en' className='light' data-theme='light'>
+      <body className='bg-background text-foreground'>{children}</body>
     </html>
   );
 }
