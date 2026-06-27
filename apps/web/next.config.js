@@ -9,5 +9,10 @@ module.exports = {
         port: '',
       }
     ],
-  } 
+  },
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '10mb',
+    },
+  },
 };
