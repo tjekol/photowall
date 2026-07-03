@@ -3,7 +3,7 @@ import { PortableTextBlock } from 'sanity';
 export type IPicture = {
   _id: string;
   name: string;
-  description: PortableTextBlock[];
+  name_tag: string;
   image: string,
   createdAt: string;
 }
