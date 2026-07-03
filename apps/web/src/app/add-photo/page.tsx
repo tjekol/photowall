@@ -138,6 +138,9 @@ export default function AddPhotoPage() {
             <Input placeholder='Name tag for photo i.e., "bella"' />
             <FieldError />
           </TextField>
+          <span className='opacity-50'>
+            PS! Contact thea.jenny02@gmail.com to delete a photo.
+          </span>
           {error && <p className='text-danger text-sm'>{error}</p>}
           <div className='flex gap-2 justify-end'>
             <Button type='submit' isDisabled={isSubmitting}>

@@ -12,9 +12,9 @@
 
 ## Website for my photos.
 
-This is a website for photos that I've taken with my camera.
+This is a photo wall where everyone can share photos!
 
-### Hvordan kjøre?
+#### Hvordan kjøre?
 
 1. Last ned dependencies
 

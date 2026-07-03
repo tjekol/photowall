@@ -47,7 +47,7 @@ export default function HomePage() {
         ))}
       </div>
       <a
-        href='https://github.com/tjekol/memories'
+        href='https://github.com/tjekol/photowall'
         target='_'
         className='static bottom-6 mt-8 hover:underline text-gray-400'
       >
