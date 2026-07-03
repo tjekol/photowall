@@ -25,7 +25,17 @@ export default function HomePage() {
 
       <div className='columns-xs w-full sm:w-4/5 gap-4 '>
         {pictures.map((picture) => (
-          <div key={picture._id} className='mb-4'>
+          <div key={picture._id} className='mb-4 relative'>
+            {picture.name && (
+              <span className='absolute bottom-2 left-2 px-1 bg-white/60'>
+                {picture.name}
+              </span>
+            )}
+            {picture.name_tag && (
+              <span className='absolute bottom-2 right-2 px-1 bg-white/60'>
+                @{picture.name_tag}
+              </span>
+            )}
             <Image
               className='w-full aspect-image'
               src={picture.image}
